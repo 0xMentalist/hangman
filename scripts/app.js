@@ -1,7 +1,9 @@
 const newGame = async () => {
 let firstGame
 
-const puzzle = await fetchPuzzle(2)
+let randomCount = Math.floor(3 * Math.random() + 1)
+
+const puzzle = await fetchPuzzle(randomCount)
 
 firstGame = new Hangman(puzzle.puzzle)
 firstGame.renderer()
